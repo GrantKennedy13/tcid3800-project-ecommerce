@@ -257,15 +257,15 @@ nav{
 
 .scPlayerBox{
 	float: left;
-	border: solid 3px #333;
+	/*border: solid 3px #333;*/
 	width: 52%;
 	height: 130px;
 	margin-right: 4%;
 	border-radius: 8px;
 }
-.diamond{ border: solid 3px #6438FF}
-.bells{ border: solid 3px #52E3FE}
-.wires{ border: #401EB3}
+.diamond{ border-top: solid 3px #6438FF;}
+.bells{ border-top: solid 3px #52E3FE;}
+.wires{ border-top:  solid 3px #401EB3;}
 
 
 /*Contact Form*/
