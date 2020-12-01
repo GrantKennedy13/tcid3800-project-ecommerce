@@ -14,7 +14,7 @@
 	  <!--Google Font-->
 	  <link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>SoundSource</title>
+    <title>Contact Us-SoundSource</title>
   </head>
 	
   <body>
@@ -22,7 +22,7 @@
 <!--Navbar-->
 	<nav class="navbar navbar-expand-lg fixed-top">
 		<div class="contain">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="index.htm">
 				<img src="Assets/Logo/logo_yellow.svg" width="" height="30" alt="SoundSource" loading="lazy">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
 			</button>
 			<div class="collapse navbar-collapse float-right" id="navbarNavAltMarkup">
 				 <div class="navbar-nav">
-					  <a class="nav-link" href="contact.htm">CONTACT US</a>
+					  <a class="nav-link" href="#">CONTACT US</a>
 					<a class="checkoutGroup" href="checkout.htm">
 					  <a class="nav-link" href="checkout.htm">CHECKOUT</a>
 						<i class="fas fa-shopping-cart"></i>
@@ -40,48 +40,32 @@
 		</div>
 	</nav>
 <!--End Navbar-->
-
-	<div id="hero">
-		<div class="contain">
-			<h1 class="whiteText">Take your songs to<br>the next level</h1>
-			<h3 id="heroSubHead" class="whiteText">Quality, royalty free samples starting at <br>$4.99/Pack</h3>
-			<div class="heroCTAGroup">
-				<button class="button mainCTA text-uppercase" type="button" onClick="location.href='#landingBottom'">Shop Sample Packs</button>
-				<button class="button secondCTA text-uppercase" type="button" onClick="location.href='contact.htm'">Contact Us</button>
-			</div>
-		</div>
-	</div>
 	 
 <!--Main Content-->
 	<div class="contain">
-		<div id="landingBottom">
-			<h2>Our Top Packs</h2>
-			<div id="productPreview">
-				<div class="productColumn">
-					<h3 class="text-center">Diamond</h3>
-					<img class="productImg" src="Assets/Product Images/Diamond_card.jpg" alt="diamondusb">
-					<button class="button thirdCTA text-uppercase a" onClick="location.href='product_diamond.htm'">Learn More</button>
-				</div>
-				<div class="productColumn centerColumn">
-					<h3 class="text-center">Bells</h3>
-					<img class="productImg" src="Assets/Product Images/Bells_card.jpg" alt="bellsusb">
-					<button class="button thirdCTA text-uppercase" onClick="location.href='product_bells.htm'">Learn More</button>
-				</div>
-				<div class="productColumn">
-					<h3 class="text-center">Wires</h3>
-					<img class="productImg" src="Assets/Product Images/Wires_card.jpg" alt="wiresusb">
-					<button class="button thirdCTA text-uppercase" onClick="location.href='product_wires.htm'">Learn More</button>
-				</div>
-			</div>
+		<div id="contactContent">
+			<h1>Contact Us</h1>
+			<form class="contactForm">
+				<h3>We're here to help!</h3>
+				<label>Name</label>
+				<input type="text" id="nameField" placeholder="Name">
+				<label>Email</label>
+				<input type="text" id="emailField" placeholder="Email Address">
+				<label>What would you like to tell us?</label>
+				<textarea class="d-block w-100" type="text" id="messageField" placeholder="Message"></textarea>
+				<button  type="button" class="button" id="contactSubmit" onClick="validateForm()">Send Message</button>
+			</form>
 		</div>
+		
 	</div>
+	  
 <!--End Main Content-->
 	  
 <!--Footer-->
 	  <div class="footer">
 		  <div class="contain">
 			<div class="footerLeft float-left">
-				<a href="#hero">
+				<a href="index.htm">
 				<img src="Assets/Logo/logo_white.svg" alt="logo_white" height="20">
 				</a>
 			</div>
@@ -91,7 +75,7 @@
 					<a class="nav-link footerLink" href="contact.htm">Contact Us</a>
 				</div>
 				<div class="float-right">
-					<a class="nav-link footerLink" href="#landingBottom">All Packs</a>
+					<a class="nav-link footerLink" href="index.htm#landingBottom">All Packs</a>
 					<a class="nav-link footerLink" href="product_diamond.htm">Diamond</a>
 					<a class="nav-link footerLink" href="product_bells.htm">Bells</a>
 					<a class="nav-link footerLink" href="product_wires.htm">Wires</a>
@@ -102,9 +86,42 @@
 	  </div> 
 <!-- End Footer-->
 	  
+<!-- Script-->
+  <script>
+	function validateEmail(){
+		var email = document.getElementById("emailField");
+			if (email.value.includes('@')){
+				 window.location.href="contact_confirmed.htm";
+			}else{
+				window.alert('Please Enter a Valid Email Address');
+			}
+	} 
+	
+	  
+	  
+	function validateForm(){
+  		var x = document.getElementById("nameField").value;
+	    var y = document.getElementById("emailField").value;
+	    var z = document.getElementById("messageField").value;
+  		if (x == "" || y=="" || z==""){
+    	window.alert('All feilds must be filled out');
+		} else{
+			
+		    validateEmail();
+		}
+	}
+	
+	
+
+	
+</script>  
   </body>
+	
+
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	
+
   
 </html>

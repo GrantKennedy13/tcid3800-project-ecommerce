@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<!--Custom CSS-->
+	  <link rel="stylesheet" href="CSS/custom.css">
+	<!--Font Awesome-->
+	  	<script src="https://kit.fontawesome.com/c690aea8ef.js" crossorigin="anonymous"></script>
+	  <!--Google Font-->
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Checkout-SoundSource</title>
+  </head>
+	
+  <body onLoad="showSubTotal()">
+	  
+<!--Navbar-->
+	<nav class="navbar navbar-expand-lg fixed-top">
+		<div class="contain">
+			<a class="navbar-brand" href="index.htm">
+				<img src="Assets/Logo/logo_yellow.svg" width="" height="30" alt="SoundSource" loading="lazy">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			 <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse float-right" id="navbarNavAltMarkup">
+				 <div class="navbar-nav">
+					  <a class="nav-link" href="contact.htm">CONTACT US</a>
+					<a class="checkoutGroup" href="#">
+					  <a class="nav-link">CHECKOUT</a>
+						<i class="fas fa-shopping-cart"></i>
+					</a>
+				 </div>
+			</div>
+		</div>
+	</nav>
+<!--End Navbar-->
+	 
+<!--Main Content-->
+	<div class="contain">
+	<div id="checkoutContent">	
+	<h1>Checkout</h1>
+	<div class="orderForm w-100">
+		<!--Diamond Row-->
+		<div class="checkoutRow" id="diamondRow">
+			<div class="checkoutProduct float-left">
+				<img src="Assets/Product Images/Diamond_card.jpg" class="productImgSmall" width="180" alt="diamond">
+				<h3>Diamond</h3>
+				<p class="orderSub">Premium Alternative Sample Pack</p>
+				<div class="checkoutPoints">
+					<i class="fas fa-caret-right"></i>
+					<p class="d-inline">Standard Download - $4.99</p>	
+				</div>	
+				<div class="checkoutPoints">
+					<i class="fas fa-caret-right"></i>
+					<p class="d-inline">Premium USB - $7.99</p>	
+				</div>
+			</div>
+			<div class="checkoutInput float-right">
+				<input type="number" class="quantity d-inline" id="diamondQuantity" min="0" value="0"/>
+				<select class="specs " name="diamondSpecs" onChange="dSelect(this.value)">
+				  <option value="" disabled selected hidden>Download or USB?</option>
+				  <option value="dwnD">Standard Download</option>
+				  <option value="usbD">Premium USB</option>
+				</select>
+				<h5 id="diamondPrice"></h5>
+			</div>
+		</div>
+		<!--Bells Row-->
+		<div class="checkoutRow" id="bellsRow">
+			<div class="checkoutProduct float-left">
+				<img src="Assets/Product Images/Diamond_card.jpg" class="productImgSmall" width="180" alt="diamond">
+				<h3>Bells</h3>
+				<p class="orderSub">2000s Rock Sample Pack</p>
+				<div class="checkoutPoints">
+					<i class="fas fa-caret-right"></i>
+					<p class="d-inline">Standard Download - $3.99</p>	
+				</div>	
+				<div class="checkoutPoints">
+					<i class="fas fa-caret-right"></i>
+					<p class="d-inline">Premium USB - $5.99</p>	
+				</div>
+		</div>
+		<div class="checkoutInput float-right">
+				<input type="number" class="quantity d-inline" id="bellsQuantity" min="0" value="0"/>
+				<select class="specs " name="diamondSpecs" onChange="bSelect(this.value)">
+				  <option value="" disabled selected hidden>Download or USB?</option>
+				  <option value="dwnB">Standard Download</option>
+				  <option value="usbB">Premium USB</option>
+				</select>
+				<h5 id="bellsPrice"></h5>
+		</div>
+		</div>
+		<!--Wires Row-->
+		<div class="checkoutRow" id="wiresRow">
+			<div class="checkoutProduct float-left">
+				<img src="Assets/Product Images/Diamond_card.jpg" class="productImgSmall" width="180" alt="diamond">
+				<h3>Wires</h3>
+				<p class="orderSub">Electronic Sample Pack</p>
+				<div class="checkoutPoints">
+					<i class="fas fa-caret-right"></i>
+					<p class="d-inline">Standard Download - $4.99</p>	
+				</div>	
+				<div class="checkoutPoints">
+					<i class="fas fa-caret-right"></i>
+					<p class="d-inline">Premium USB - $6.99</p>	
+				</div>
+		</div>
+		<div class="checkoutInput float-right">
+				<input type="number" class="quantity d-inline" id="wiresQuantity" min="0" value="0"/>
+				<select class="specs " name="diamondSpecs" onChange="wSelect(this.value)">
+				  <option value="" disabled selected hidden>Download or USB?</option>
+				  <option value="dwnW">Standard Download</option>
+				  <option value="usbW">Premium USB</option>
+				</select>
+				<h5 id="wiresPrice"></h5>
+		</div>
+		</div>
+		
+		<h5 id="subTotal"></h5>
+		
+	</div>
+	</div> 
+		
+	  
+	</div>  
+	
+	  <button type="button" onClick="randFunct()">Button</button>
+<!--End Main Content-->
+	  
+<!--Footer-->
+	  <div class="footer">
+		  <div class="contain">
+			<div class="footerLeft float-left">
+				<a href="#hero">
+				<img src="Assets/Logo/logo_white.svg" alt="logo_white" height="20">
+				</a>
+			</div>
+			<div class="footerRight float-right">
+				<div class="float-left">
+					<a class="nav-link footerLink" href="#">Checkout</a>
+					<a class="nav-link footerLink" href="contact.htm">Contact Us</a>
+				</div>
+				<div class="float-right">
+					<a class="nav-link footerLink" href="index.htm#landingBottom">All Packs</a>
+					<a class="nav-link footerLink" href="product_diamond.htm">Diamond</a>
+					<a class="nav-link footerLink" href="product_bells.htm">Bells</a>
+					<a class="nav-link footerLink" href="product_wires.htm">Wires</a>
+				</div>
+				</div>
+		  </div>
+		  
+	  </div> 
+<!-- End Footer-->
+	  
+  </body>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	
+<script>
+	//Show Price based on input and select
+	var dPrice = 4.99
+	var dPricePlus = 7.99
+	
+	function dSelect(selectValue){
+    var dQuant = document.getElementById("diamondQuantity").value;
+    switch(selectValue){
+      case "dwnD":
+      	return: document.getElementById("diamondPrice").innerHTML = "$" + dPrice * dQuant; 
+		
+      break;	
+      case "usbD":
+  		document.getElementById("diamondPrice").innerHTML = "$" + dPricePlus * dQuant;
+      break;
+	}
+	}
+	
+	var bPrice = 3.99
+	var bPricePlus = 5.99
+	
+	function bSelect(selectValue){
+    var bQuant = document.getElementById("bellsQuantity").value;
+    switch(selectValue){
+      case "dwnB":
+		
+      	document.getElementById("bellsPrice").innerHTML = "$" + bPrice * bQuant; 
+      break;	
+      case "usbB":
+  		document.getElementById("bellsPrice").innerHTML = "$" + bPricePlus * bQuant;
+      break;
+	}
+	}
+	
+	var wPrice = 4.99
+	var wPricePlus = 6.99
+	
+	function wSelect(selectValue){
+    var wQuant = document.getElementById("wiresQuantity").value;
+    switch(selectValue){
+      case "dwnW":
+	  return: document.getElementById("wiresPrice").innerHTML = "$" + wPrice * wQuant; 
+      break;	
+      case "usbW":
+  		document.getElementById("wiresPrice").innerHTML = "$" + wPricePlus * wQuant;
+      break;
+	}
+	}
+	//Add up subtotal
+	var s = dSelect(dwnD).return;
+	function randFunct(){
+		window.alert(s);
+	}
+	
+	
+	
+	function showSubTotal(){
+		
+	}
+	
+</script>
+  
+</html>
