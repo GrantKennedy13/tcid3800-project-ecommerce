@@ -82,7 +82,7 @@ button:disabled{
 /*content container All Pages*/
 .contain{
 	width: 85%;
-	max-width: 1360;
+	max-width: 1360px;
 	margin-right: auto;
 	margin-left: auto;
 }
